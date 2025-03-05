@@ -1,3 +1,18 @@
+/**
+ * Middleware to validate task input data.
+ * 
+ * Validates the following fields:
+ * - title: Required, must be a string, and must be between 3 and 100 characters.
+ * - description: Optional, if provided must be a string and less than 500 characters.
+ * - date: Optional, if provided must be a valid ISO 8601 date.
+ * - done: Optional, if provided must be a boolean.
+ * 
+ * If validation fails, responds with a 400 status and a JSON object containing the validation errors.
+ * If validation passes, proceeds to the next middleware.
+ * 
+ * @module taskValidator
+ */
+
 const { body, validationResult } = require("express-validator");
 
 
