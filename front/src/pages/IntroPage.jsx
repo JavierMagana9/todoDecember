@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const IntroPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-cyan-50 p-4">
-    <h1 className="text-4xl font-bold mb-8">Welcome to Your Todo App</h1>
+    <h1 className="text-4xl font-bold mb-8">Welcome to My Todo App</h1>
     <p className="text-lg mb-10">Stay organized and boost your productivity</p>
     <Link 
       to="/todos" 
