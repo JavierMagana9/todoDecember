@@ -19,10 +19,11 @@ const taskRoutes = require('./routers/taskRoutes');
 const db = require('./config/db');
 
 const app = express();
+const cors = require('cors');
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-
+app.use(cors());
 /**
  * GET /
  * Test route to check if the server is running.

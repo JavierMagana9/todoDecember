@@ -1,6 +1,6 @@
 // src/hooks/useTasks.js
 import { useState, useEffect } from 'react';
-import { getTasks, createTask, updateTask, deleteTask, deleteAllTasks, toggleTaskCompletion } from '../services/taskService';
+import { getTasks, createTask, updateTask, deleteTask, deleteAllTasks, toggleTaskCompletion } from '../services/todoService';
 import { formatApiError } from '../services/api/helpers';
 
 const useTasks = () => {
@@ -74,7 +74,7 @@ const useTasks = () => {
       const task = tasks.find(t => t._id === id);
       if (!task) return;
       
-      const response = await toggleTaskCompletion(id, task.completed);
+      const response = await toggleTaskCompletion(id, task);
       setTasks(prevTasks => 
         prevTasks.map(t => t._id === id ? response.data : t)
       );
