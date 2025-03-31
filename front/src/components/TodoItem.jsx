@@ -52,7 +52,7 @@ const TodoItem = ({
           onClick={() => onToggleComplete(task._id)} 
           className="bg-white text-black py-1 px-3 rounded-lg hover:bg-gray-100 transition-colors"
         >
-          {task.completed ? 'Undo' : 'Done!'}
+          {task.done ? 'Undo' : 'Done!'}
         </button>
         <button 
           onClick={handleEdit} 
