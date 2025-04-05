@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== "test") {
    * Connect to MongoDB.
    * @see {@link https://mongoosejs.com/docs/connections.html|Mongoose Connections}
    */
-  mongoose.connect("mongodb://localhost:27017/todo_list", {
+  mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
